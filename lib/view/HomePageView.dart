@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageView extends StatefulWidget {
@@ -87,7 +88,7 @@ class _HomePageViewState extends State<HomePageView> {
                                 ),
                                 Text(
                                   'ivansetiawan@gmail.com',
-                                  style: GoogleFonts.spartan(),
+                                  style: GoogleFonts.spartan(fontSize: 12),
                                 )
                               ],
                             )
@@ -100,14 +101,15 @@ class _HomePageViewState extends State<HomePageView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          MaterialButton(
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xff59B2F2),
+                              elevation: 0,
+                              minimumSize: Size(widthHp, 40),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                             onPressed: () {},
-                            color: Color(0xff59B2F2),
-                            elevation: 0,
-                            minWidth: widthHp,
-                            height: 40,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5)),
                             child: Text(
                               'Clock in',
                               style: GoogleFonts.spartan(
@@ -115,14 +117,15 @@ class _HomePageViewState extends State<HomePageView> {
                                   color: Colors.white),
                             ),
                           ),
-                          MaterialButton(
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xff70A8BF),
+                              elevation: 0,
+                              minimumSize: Size(widthHp, 40),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                             onPressed: () {},
-                            color: Color(0xff70A8BF),
-                            minWidth: widthHp,
-                            height: 40,
-                            elevation: 0,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5)),
                             child: Text(
                               'Clock out',
                               style: GoogleFonts.spartan(
@@ -138,7 +141,386 @@ class _HomePageViewState extends State<HomePageView> {
                     ],
                   ),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Attendance Overview (Jun 2020)',
+                          style: GoogleFonts.spartan(
+                              fontWeight: FontWeight.w700, fontSize: 12),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View All',
+                            style: GoogleFonts.spartan(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12,
+                                color: Color(0xff59B2F2)),
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: Color(0xff00C292), width: 2),
+                              ),
+                              child: Center(
+                                child: Text('18',
+                                    style: GoogleFonts.spartan(
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xff00C292))),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Present',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: Color(0xffFBBC04), width: 2),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '0',
+                                  style: GoogleFonts.spartan(
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xffFBBC04)),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Overtime',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: Color(0xffFFAD61), width: 2),
+                              ),
+                              child: Center(
+                                child: Text('3',
+                                    style: GoogleFonts.spartan(
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xffFFAD61))),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Late',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: Color(0xffF15B5D), width: 2),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '0',
+                                  style: GoogleFonts.spartan(
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xffF15B5D)),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Absen',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: Color(0xffC159F2), width: 2),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '7',
+                                  style: GoogleFonts.spartan(
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xffC159F2)),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Holiday',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Task Overview (Jun 2020)',
+                          style: GoogleFonts.spartan(
+                              fontWeight: FontWeight.w700, fontSize: 12),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View All',
+                            style: GoogleFonts.spartan(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12,
+                                color: Color(0xff59B2F2)),
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xff70A8BF),
+                              ),
+                              child: Center(
+                                child: Text('18',
+                                    style: GoogleFonts.spartan(
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white)),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Complete',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xff00C292)),
+                              child: Center(
+                                child: Text(
+                                  '1',
+                                  style: GoogleFonts.spartan(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Doing',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xffFFAD61)),
+                              child: Center(
+                                child: Text('2',
+                                    style: GoogleFonts.spartan(
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white)),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Pending',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              height:
+                                  (MediaQuery.of(context).size.width / 5) - 27,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xffF15B5D)),
+                              child: Center(
+                                child: Text(
+                                  '0',
+                                  style: GoogleFonts.spartan(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Overdue',
+                              style: GoogleFonts.spartan(fontSize: 10),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Notice Board',
+                          style: GoogleFonts.spartan(
+                              fontWeight: FontWeight.w700, fontSize: 12),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View All',
+                            style: GoogleFonts.spartan(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12,
+                                color: Color(0xff59B2F2)),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              ListView.builder(
+                  physics: const ScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 5,
+                  itemBuilder: (index, context) {
+                    return Container(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            width: 1,
+                            color: Color(0xffB9B9B9),
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Work From Office (WFO)',
+                                  style: GoogleFonts.spartan(
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xff3C3C3C)),
+                                ),
+                                Text(
+                                  '26 June 2020',
+                                  style: GoogleFonts.spartan(
+                                      fontSize: 12, color: Color(0xff7D7D7D)),
+                                )
+                              ],
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios_sharp,
+                              size: 15,
+                              color: Colors.grey[600],
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  })
             ],
           ),
         ),
