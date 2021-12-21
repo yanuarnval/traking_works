@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:tracking_works/view/HomePageView.dart';
+
+import 'package:tracking_works/theme/theme_app.dart';
 
 import 'package:tracking_works/view/LoginPageView.dart';
 
@@ -13,14 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Color(0xff286782)));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(),
+      theme: TrakingWorks.Light(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: HomePageView(),
+      home: LoginPageView(),
     );
   }
 }
