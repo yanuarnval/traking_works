@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:tracking_works/theme/theme_app.dart';
+import 'package:tracking_works/view/HomePageView.dart';
 
 import 'package:tracking_works/view/LoginPageView.dart';
+import 'package:tracking_works/view/MainScreen.dart';
 
 void main() {
   runApp(const MyApp());
